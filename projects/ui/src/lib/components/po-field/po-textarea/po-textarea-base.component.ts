@@ -123,7 +123,12 @@ export abstract class PoTextareaBaseComponent implements ControlValueAccessor, V
   /**
    * @optional
    *
+   * @deprecated 2.X.X
    * @description
+   *
+   * **Deprecated**
+   *
+   * > Esta propriedade está depreciada, utilize a propriedade `p-auto-focus`.
    *
    * Aplica foco no elemento ao ser iniciado.
    *

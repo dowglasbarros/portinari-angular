@@ -146,7 +146,12 @@ export abstract class PoDatepickerBaseComponent implements ControlValueAccessor,
   /**
    * @optional
    *
+   * @deprecated 2.X.X
    * @description
+   *
+   * **Deprecated**
+   *
+   * > Esta propriedade está depreciada, utilize a propriedade `p-auto-focus`.
    *
    * Aplica foco no elemento ao ser iniciado.
    *
