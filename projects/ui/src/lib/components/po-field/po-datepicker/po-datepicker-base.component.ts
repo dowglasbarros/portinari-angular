@@ -4,6 +4,7 @@ import { AbstractControl, ControlValueAccessor, Validator } from '@angular/forms
 import { convertDateToISODate, convertDateToISOExtended, convertIsoToDate, convertToBoolean, formatYear,
   getShortBrowserLanguage, isTypeof, setYearFrom0To100, validateDateRange } from '../../../utils/util';
 import { dateFailed, requiredFailed } from './../validators';
+import { InputBoolean } from '../../../decorators';
 import { PoMask } from '../po-input/po-mask';
 
 import { PoDatepickerIsoFormat } from './enums/po-datepicker-iso-format.enum';
@@ -70,6 +71,19 @@ export abstract class PoDatepickerBaseComponent implements ControlValueAccessor,
   protected onChangeModel: any = null;
   protected onTouchedModel: any = null;
   protected validatorChange: any;
+
+  /**
+   * @optional
+   *
+   * @description
+   *
+   * Aplica foco no elemento ao ser iniciado.
+   *
+   * > Caso mais de um elemento seja configurado com essa propriedade, apenas o último elemento declarado com ela terá o foco.
+   *
+   * @default `false`
+   */
+  @Input('p-auto-focus') @InputBoolean() autoFocus: boolean = false;
 
   /* Nome do componente datepicker. */
   @Input('name') name: string;
